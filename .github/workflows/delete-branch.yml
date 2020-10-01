@@ -1,1 +1,11 @@
+name: delete branch
+on: pull_request
 
+jobs:
+  delete-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: delete
+      - uses: SvanBoxel/delete-merged-branch@v1.3.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
