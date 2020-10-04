@@ -1,6 +1,7 @@
 name: delete branch
-on: pull_request
-
+on: pull_request:
+  types: [closed]
+  
 jobs:
   delete-branch:
     runs-on: ubuntu-latest
